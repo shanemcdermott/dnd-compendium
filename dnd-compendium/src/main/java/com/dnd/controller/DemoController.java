@@ -8,12 +8,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.dnd.repository.SpellRepository;
+import com.dnd.service.SpellService;
 
 @Controller
 public class DemoController {
 
 	@Autowired
 	private SpellRepository spellRepository;
+
+	@Autowired
+	private SpellService spellService;
 
 	@RequestMapping(value = "/spells", method = RequestMethod.GET)
 	public String spellListDemo(Model model) {
@@ -32,9 +36,17 @@ public class DemoController {
 		return "spellListTemplate";
 	}
 
-	@RequestMapping(value = "spells/type/{type}", method = RequestMethod.GET)
-	public String spellListDemoByType(Model model, @PathVariable String type) {
-		model.addAttribute("spells", spellRepository.findByType(type));
+	@RequestMapping(value = "spells/type/{school}", method = RequestMethod.GET)
+	public String spellListDemoByType(Model model, @PathVariable String school) {
+		model.addAttribute("spells", spellRepository.findBySchool(school));
+		return "spellListTemplate";
+	}
+
+	@RequestMapping(value = "spells/class/{characterClass}", method = RequestMethod.GET)
+	public String spellListByClass(Model model, @PathVariable String characterClass) {
+
+		model.addAttribute("spells", spellService.findSpellsByClass(characterClass));
+
 		return "spellListTemplate";
 	}
 

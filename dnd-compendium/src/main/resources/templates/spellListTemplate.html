@@ -13,16 +13,14 @@
 		<div class="col-xs-1">ID</div>
 		<div class="col-xs-2">NAME</div>
 		<div class="col-xs-1">LEVEL</div>
-		<div class="col-xs-2">TYPE</div>
-		<div class="col-xs-1">RITUAL</div>
+		<div class="col-xs-2">SCHOOL</div>
 		<div class="col-xs-5">DESCRIPTION</div>
 	</div>
 	<div class="row" th:each="spell : ${spells}">
         <div class="col-xs-1"><span th:text="${spell.id}" /></div>
         <div class="col-xs-2"><span th:text="${spell.name}" /></div>
         <div class="col-xs-1"><span th:text="${spell.level}" /></div>
-        <div class="col-xs-2"><span th:text="${spell.type}" /></div>
-        <div class="col-xs-1"><span th:text="${spell.ritual}" /></div>
+        <div class="col-xs-2"><span th:text="${spell.school}" /></div>
         <div class="col-xs-5"><span th:text="${spell.description}" /></div>
 	</div>
 </div>
