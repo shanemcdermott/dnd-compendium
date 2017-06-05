@@ -19,22 +19,22 @@ public interface SpellRepository extends CrudRepository<Spell, Long> {
 
 	List<Spell> findBySchool(String school);
 	
-//	List<Spell> findByRitual();
-//
-//	List<Spell> findByBardTrue();
-//
-//	List<Spell> findByClericTrue();
-//
-//	List<Spell> findByDruidTrue();
-//
-//	List<Spell> findByPaladinTrue();
-//
-//	List<Spell> findByRangerTrue();
-//
-//	List<Spell> findBySorcererTrue();
-//
-//	List<Spell> findByWarlockTrue();
-//
-//	List<Spell> findByWizardTrue();
+	List<Spell> findByRitualTrue();
+
+	List<Spell> findByBardTrue();
+
+	List<Spell> findByClericTrue();
+
+	List<Spell> findByDruidTrue();
+
+	List<Spell> findByPaladinTrue();
+
+	List<Spell> findByRangerTrue();
+
+	List<Spell> findBySorcererTrue();
+
+	List<Spell> findByWarlockTrue();
+
+	List<Spell> findByWizardTrue();
 	
 }

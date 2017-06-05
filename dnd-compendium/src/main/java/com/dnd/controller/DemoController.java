@@ -36,7 +36,7 @@ public class DemoController {
 		return "spellListTemplate";
 	}
 
-	@RequestMapping(value = "spells/type/{school}", method = RequestMethod.GET)
+	@RequestMapping(value = "spells/school/{school}", method = RequestMethod.GET)
 	public String spellListDemoByType(Model model, @PathVariable String school) {
 		model.addAttribute("spells", spellRepository.findBySchool(school));
 		return "spellListTemplate";

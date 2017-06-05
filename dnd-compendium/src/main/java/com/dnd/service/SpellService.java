@@ -14,8 +14,6 @@ public class SpellService {
 	@Autowired
 	private SpellRepository spellRepository;
 
-	// public List<Spell>
-
 	public List<Spell> findSpellsByClass(String characterClass) {
 
 		switch (characterClass) {
@@ -25,6 +23,10 @@ public class SpellService {
 			return spellRepository.findByClericTrue();
 		case "druid":
 			return spellRepository.findByDruidTrue();
+		case "fighter":
+			break;	// exit switch; partial table schema issue
+		case "monk":
+			break;	// exit switch; partial table schema issue
 		case "paladin":
 			return spellRepository.findByPaladinTrue();
 		case "ranger":
@@ -36,7 +38,7 @@ public class SpellService {
 		case "wizard":
 			return spellRepository.findByWizardTrue();
 		}
-
+		// Default return if a switch case isn't found
 		return spellRepository.findAll();
 	}
 
