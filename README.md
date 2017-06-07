@@ -4,7 +4,7 @@ The **DnD Compendium** is a student driven project to build an SRD legal (as dic
 # Initial Milestone
 The initial milestone is to hold minor player character (PC) data and act as a *spell manager* so players can quickly glance what spells their characters know, have memorized/prepared, have used, and have available -- all along with descriptions of said spells.
 
-# Later Milestones
+# Further Milestones
 Further milestones include dungeon masters having access to player credentials to better conduct skill checks like perception and be aware of PC's health and ailments.
 
 # Live Streams
